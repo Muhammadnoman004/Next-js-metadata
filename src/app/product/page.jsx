@@ -6,17 +6,26 @@ export const metadata = {
 }
 
 export default function AllProductPage() {
-
+    let data;
     const getData = async () => {
         const Alldata = await fetch('https://dummyjson.com/products')
             .then(res => res.json())
-            .then(res => console.log(res));
+            .then(res => {
+                data = res
+                console.log(data);
+            });
     }
     getData()
     return (
         <div>
             <h1>All Product Page...</h1>
-            <h3></h3>
+            {
+                data.map((singleData) => {
+                    return(
+                        <h2>{singleData}</h2>
+                    )
+                })
+            }
         </div>
     )
 }
