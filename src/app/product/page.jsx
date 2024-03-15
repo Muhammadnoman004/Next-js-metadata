@@ -7,10 +7,10 @@ export const metadata = {
 
 const getData = async () => {
     return new Promise(async (res, rej) => {
-        const result = await fetch('https://dummyjson.com/products')
+        const Api = await fetch('https://dummyjson.com/products')
 
-        if (result.ok) {
-            const data = await result.json();
+        if (Api.ok) {
+            const data = await Api.json();
             res(data.products)
             console.log(data.products);
         }
@@ -30,7 +30,7 @@ export default async function AllProductPage() {
                     return (
                         <div style={{ display: 'flex', justifyContent: 'space-around' }}>
 
-                            <div style={{ border: '2px solid black', padding: '7px', margin: '15px' }}>
+                            <div key={singleData.id} style={{ border: '2px solid black', padding: '7px', margin: '15px' }}>
                                 <img style={{ width: '300px' }} src={singleData.thumbnail} alt="" />
                                 <h2>{singleData.title}</h2>
                                 <h3>$ {singleData.price}</h3>
