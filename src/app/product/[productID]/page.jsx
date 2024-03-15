@@ -30,10 +30,14 @@ export default async function SingleProductPage({ params }) {
     const SingleData = await SingleProduct(params.productID)
     return (
         <div>
-            <h1>Single Product Page...</h1>
-            <h2>Product {params.productID} detail page.</h2>
-            <div>
-                <img src={SingleData.thumbnail} alt="" />
+            <h1 id='singleProHead'>Single Product Page...</h1>
+            <h2 id='ProductID'>Product <mark>{SingleData.id}</mark> detail page.</h2>
+            <div className='SingleProductDiv'>
+                <img id='ProductImg' src={SingleData.thumbnail} alt="" />
+                <h3 id='ProductTitle'>{SingleData.title}</h3>
+                <h4 id='ProductPrice'><span>Price : </span>$ {SingleData.price}</h4>
+                <h4 id='ProductBrand'><span>Brand : </span>{SingleData.brand}</h4>
+                <p id='ProductDes'><span>Description : </span>{SingleData.description}</p>
             </div>
         </div>
     )

@@ -25,16 +25,16 @@ export default async function AllProductPage() {
     return (
         <div>
             <h1>All Product Page...</h1><br />
+
             {
                 data.map(singleData => {
                     return (
-                        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-
-                            <div key={singleData.id} style={{ border: '2px solid black', padding: '7px', margin: '15px' }}>
-                                <img style={{ width: '300px' }} src={singleData.thumbnail} alt="" />
-                                <h2>{singleData.title}</h2>
-                                <h3>$ {singleData.price}</h3>
-                                <p>{singleData.description}</p><hr />
+                        <div>
+                            <div key={singleData.id} className='ProductDiv'>
+                                <img id='AllProductImg' src={singleData.thumbnail} alt="" />
+                                <h2 id='AllProductTitle'>{singleData.title}</h2>
+                                <h3 id='AllProductPrice'>$ {singleData.price}</h3>
+                                <p id='AllProductDes'>{singleData.description}</p>
                             </div>
                         </div>
                     )
