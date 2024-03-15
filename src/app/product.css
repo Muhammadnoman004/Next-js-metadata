@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(235, 234, 234, 0.753);
+}
+
+#head {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.maindiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.ProductDiv {
+    border: 1px solid black;
+    width: 432px;
+    padding: 15px;
+    margin: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px black;
+    background-color: white;
+}
+
+#AllProductImg {
+    width: 400px;
+    height: 300px;
+    object-fit: contain;
+}
+
+#AllProductTitle {
+    margin-bottom: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#AllProductPrice {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+#AllProductDes {
+    margin-bottom: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Product ID Page */
+
+.SingleProductDiv {
+    border: 1px solid black;
+    width: 600px;
+    padding: 15px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px black;
+    background-color: white;
+}
+
+#ProductImg {
+    width: 400px;
+    height: 300px;
+    object-fit: contain;
+    margin-left: 77px;
+    margin-top: 15px;
+}
+
+#ProductTitle {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#ProductPrice {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#ProductBrand {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#ProductDes {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#ProductDes>span {
+    font-weight: bold;
+}
+
+#singleProHead {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#ProductID {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import '../product.css'
 
 export const metadata = {
     title: 'All Product',
@@ -24,22 +25,24 @@ export default async function AllProductPage() {
     }
     return (
         <div>
-            <h1>All Product Page...</h1><br />
+            <h1 id='head'>...All Product Page...</h1><br />
+            <div className='maindiv'>
 
-            {
-                data.map(singleData => {
-                    return (
-                        <div>
+                {
+                    data.map(singleData => {
+                        return (
+
                             <div key={singleData.id} className='ProductDiv'>
                                 <img id='AllProductImg' src={singleData.thumbnail} alt="" />
                                 <h2 id='AllProductTitle'>{singleData.title}</h2>
                                 <h3 id='AllProductPrice'>$ {singleData.price}</h3>
                                 <p id='AllProductDes'>{singleData.description}</p>
                             </div>
-                        </div>
-                    )
-                })
-            }
+
+                        )
+                    })
+                }
+            </div>
         </div>
     )
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../product.css'
 import { notFound } from 'next/navigation';
 
 const SingleProduct = (id) => {
@@ -30,7 +31,7 @@ export default async function SingleProductPage({ params }) {
     const SingleData = await SingleProduct(params.productID)
     return (
         <div>
-            <h1 id='singleProHead'>Single Product Page...</h1>
+            <h1 id='singleProHead'>...Single Product Page...</h1>
             <h2 id='ProductID'>Product <mark>{SingleData.id}</mark> detail page.</h2>
             <div className='SingleProductDiv'>
                 <img id='ProductImg' src={SingleData.thumbnail} alt="" />
